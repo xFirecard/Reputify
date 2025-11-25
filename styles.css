@@ -776,6 +776,30 @@ body {
     color: var(--text-muted);
 }
 
+/* Hero Trial Note */
+.hero-trial-note {
+    margin-top: 15px;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Pricing Trial Note */
+.trial-note {
+    color: #10b981;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #d1fae5;
+    border-radius: 20px;
+    display: inline-block;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .nav-menu {
@@ -889,4 +913,27 @@ body {
     .footer-links {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
+    .hero-trial-note {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 13px;
+    }
+    
+    .pricing-guarantee p {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+    }
+    
+    .trial-note {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Remove trial-text styling as banner is removed */
 }
