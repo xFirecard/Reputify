@@ -147,3 +147,30 @@ document.addEventListener('mousemove', (e) => {
 // Console welcome message
 console.log('%c🚀 Καλώς ήρθατε στο Reputify!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
 console.log('%cΕνδιαφέρεστε να συμμετάσχετε στην ομάδα μας; Επικοινωνήστε μαζί μας στο hello@reputify.com', 'font-size: 14px; color: #a1a1b5;');
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+});

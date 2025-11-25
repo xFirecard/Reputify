@@ -397,9 +397,9 @@ body {
 
 .pricing-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1100px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -553,6 +553,82 @@ body {
 
 .about-point p {
     font-size: 1rem;
+    margin: 0;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background: var(--background-secondary);
+}
+
+/* FAQ Section */
+.faq {
+    padding: 100px 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-color);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.8;
     margin: 0;
 }
 
@@ -750,7 +826,7 @@ body {
     }
 
     .pricing-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .pricing-card.featured {
@@ -804,6 +880,10 @@ body {
 
     .about-text h2 {
         font-size: 2rem;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
     }
 
     .footer-links {
